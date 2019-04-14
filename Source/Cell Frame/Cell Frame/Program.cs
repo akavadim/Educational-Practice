@@ -9,7 +9,7 @@ namespace Cell_Frame
             StreamReader r = new StreamReader("input.txt");
             StreamWriter w = new StreamWriter("output.txt");
             int t = int.Parse(r.ReadLine());
-            for(int i = 0; i < t; i++)
+            for(int i = 0; i <t; i++)
             {
                 string[] l = r.ReadLine().Split(' ');
                 w.Write(res(int.Parse(l[0]), int.Parse(l[1]), int.Parse(l[2])));
@@ -18,15 +18,13 @@ namespace Cell_Frame
         }
         static public int res(int x, int y, int a)
         {
-            if (a > x || a > y)
-                return 0;
-            if (rr(x, y, a) == 1)
+            if (f(x, y, a) == 1)
                 return 1;
-            else if (rr(y, x, a) == 1)
+            else if (f(y, x, a) == 1)
                 return 1;
             return 0;
         }
-        public static int rr(int x, int y, int a)
+        public static int f(int x, int y, int a)
         {
             int oct = x % a;
             if (oct > 1)
