@@ -1,0 +1,52 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:task59B"
+        xmlns:Properties="clr-namespace:task59B.Properties" x:Class="task59B.MainWindow"
+        mc:Ignorable="d"
+        Title="Task59B" Width="390" ResizeMode="NoResize" Height="445">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto" MinWidth="44.8"/>
+            <ColumnDefinition Width="Auto" MinWidth="148.8"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Canvas x:Name="canvasGraph" HorizontalAlignment="Center" Margin="41,9.8,43,10.2" Height="300" Width="300" Grid.Row="2" VerticalAlignment="Center" Grid.ColumnSpan="4">
+            <Path Stroke="Black">
+                <Path.Data>
+                    <GeometryGroup>
+                        <LineGeometry StartPoint="0, 150" EndPoint="300, 150"/>
+                        <LineGeometry StartPoint="150, 0" EndPoint="150, 300"/>
+                        <LineGeometry StartPoint="0,0" EndPoint="0,300"/>
+                        <LineGeometry StartPoint="0,0" EndPoint="300,0"/>
+                        <LineGeometry StartPoint="300,0" EndPoint="300,300"/>
+                        <LineGeometry StartPoint="0,300" EndPoint="300,300"/>
+                    </GeometryGroup>
+                </Path.Data>
+            </Path>
+            <Path Fill="#CC0822A0" Stroke="Black">
+                <Path.Data>
+                    <RectangleGeometry Rect="75,75, 150, 150"/>
+                </Path.Data>
+            </Path>
+            <Label Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="134" Canvas.Top="146"/>
+            <Label Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="210" Canvas.Top="146"/>
+        </Canvas>
+        <TextBox x:Name="textBoxX" Margin="10" Height="23" Width="120" LostFocus="TextBoxX_LostFocus" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Text="0"/>
+        <TextBox x:Name="textBoxY" Height="24" Margin="10" Width="120" LostFocus="TextBoxY_LostFocus" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Text="0"/>
+        <Label Content="X :" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Height="25" Width="23"/>
+        <Label Content="Y :" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Grid.Row="1" Height="26" Width="23"/>
+        <Button x:Name="buttonCheckPoint" Content="Проверить" Grid.Column="2" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Center" Width="75" Height="19" Grid.ColumnSpan="2" Click="ButtonCheckPoint_Click"/>
+        <Label Content="Статус : " Grid.Column="2" Margin="10,10,0,10" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Height="26" Width="54"/>
+        <Label x:Name="labelStatus" Grid.Column="2" HorizontalAlignment="Left" Margin="63.8,10.2,0,10.2" Grid.Row="1" VerticalAlignment="Center" Height="26" Width="127" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
