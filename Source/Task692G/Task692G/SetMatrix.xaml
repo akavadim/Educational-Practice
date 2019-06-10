@@ -1,0 +1,24 @@
+﻿<Window x:Class="Task692G.SetMatrix"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task692G"
+        mc:Ignorable="d"
+        Title="SetMatrix" Height="300" Width="500" ShowInTaskbar="False" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="95"/>
+            <ColumnDefinition Width="95"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="39"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="buttonOk" Content="Ок" HorizontalAlignment="Center" VerticalAlignment="Center" Width="76" Grid.Row="1" Height="19" Grid.Column="2" IsDefault="True" Click="ButtonOk_Click"/>
+        <Button Content="Отмена" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="75" Height="19" Grid.Column="1" IsCancel="True"/>
+        <DataGrid x:Name="dataGridMatrix" Grid.ColumnSpan="3" BorderThickness="1" CanUserReorderColumns="False" CanUserSortColumns="False" HeadersVisibility="None" CanUserDeleteRows="False" EnableColumnVirtualization="True" CanUserAddRows="False" SelectionUnit="Cell"/>
+
+    </Grid>
+</Window>
