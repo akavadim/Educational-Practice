@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ConsoleUpgraded;
 
-namespace Task11_14_533B
+namespace Task10_14_533B
 {
     class Program
     {
