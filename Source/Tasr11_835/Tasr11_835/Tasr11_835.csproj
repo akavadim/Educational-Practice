@@ -33,6 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ConsoleUpgraded">
+      <HintPath>..\..\Library\ConsoleUpgraded\ConsoleUpgraded\bin\Release\ConsoleUpgraded.dll</HintPath>
+    </Reference>
+    <Reference Include="Menu">
+      <HintPath>..\..\Library\Menu\Menu\bin\Release\Menu.dll</HintPath>
+    </Reference>
+    <Reference Include="ShipsLibrary">
+      <HintPath>..\..\..\..\..\Vikentieva\Library\ShipsLibrary\ShipsLibrary\bin\Release\ShipsLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,6 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cryptographer.cs" />
+    <Compile Include="MainMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
