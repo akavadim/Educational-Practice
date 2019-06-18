@@ -117,7 +117,7 @@ namespace Task9_27
             return false;
         }
 
-        public int sumAllPlus()
+        public int SumAllPlus()
         {
             int res = 0;
             for(int i=0; i<Count; i++)
@@ -127,7 +127,7 @@ namespace Task9_27
             }
             return res;
         }
-        public int sumAllMinus()
+        public int SumAllMinus()
         {
             int res = 0;
             for (int i = 0; i < Count; i++)
@@ -215,7 +215,7 @@ namespace Task9_27
                 return;
             }
             Console.WriteLine("Сумма всех положительных элементов массива");
-            Console.WriteLine(myList.sumAllPlus());
+            Console.WriteLine(myList.SumAllPlus());
             Console.ReadKey();
         }
         static void SumAllMinus(MyListInt myList)
@@ -227,7 +227,7 @@ namespace Task9_27
                 return;
             }
             Console.WriteLine("Сумма всех отрицательных элементов массива");
-            Console.WriteLine(myList.sumAllMinus());
+            Console.WriteLine(myList.SumAllMinus());
             Console.ReadKey();
         }
     }

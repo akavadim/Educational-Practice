@@ -12,19 +12,19 @@ namespace Task1_Cell_Frame
             for(int i = 0; i <t; i++)
             {
                 string[] l = r.ReadLine().Split(' ');
-                w.Write(res(int.Parse(l[0]), int.Parse(l[1]), int.Parse(l[2])));
+                w.Write(GetResult(int.Parse(l[0]), int.Parse(l[1]), int.Parse(l[2])));
             }
             r.Close(); w.Close();
         }
-        static public int res(int x, int y, int a)
+        static public int GetResult(int x, int y, int a)
         {
-            if (f(x, y, a) == 1)
+            if (CheckFrame(x, y, a) == 1)
                 return 1;
-            else if (f(y, x, a) == 1)
+            else if (CheckFrame(y, x, a) == 1)
                 return 1;
             return 0;
         }
-        public static int f(int x, int y, int a)
+        public static int CheckFrame(int x, int y, int a)
         {
             int oct = x % a;
             if (oct > 1)

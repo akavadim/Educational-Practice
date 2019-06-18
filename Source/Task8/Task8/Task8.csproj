@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{205AF539-5B28-4D31-95E2-AF90EC752A0E}</ProjectGuid>
+    <ProjectGuid>{254317CC-4FD0-4C8C-8607-92FF9EF6B83A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Task9_27</RootNamespace>
-    <AssemblyName>Task9_27</AssemblyName>
+    <RootNamespace>Task8</RootNamespace>
+    <AssemblyName>Task8</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,10 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ConsoleUpgraded">
-      <HintPath>..\..\..\..\..\Vikentieva\Library\ConsoleUpgraded\ConsoleUpgraded\bin\Release\ConsoleUpgraded.dll</HintPath>
+      <HintPath>..\..\Library\ConsoleUpgraded\ConsoleUpgraded\bin\Release\ConsoleUpgraded.dll</HintPath>
     </Reference>
     <Reference Include="Menu">
-      <HintPath>..\..\..\..\..\Vikentieva\Library\Menu\Menu\bin\Release\Menu.dll</HintPath>
+      <HintPath>..\..\Library\Menu\Menu\bin\Release\Menu.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -54,7 +54,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
