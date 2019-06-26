@@ -17,7 +17,7 @@
             <ColumnDefinition Width="50*"/>
         </Grid.ColumnDefinitions>
         <DataGrid x:Name="dataGridMatrix" CanUserReorderColumns="False" CanUserSortColumns="False" SelectionUnit="Cell" CanUserAddRows="False" CanUserDeleteRows="False" HeadersVisibility="None" IsReadOnly="True" Margin="0" Grid.RowSpan="2" Grid.Column="1" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled"/>
-        <Button x:Name="buttonSetMatrix" Content="Задать матрицу" VerticalAlignment="Center" Margin="5" Click="ButtonSetMatrix_Click" HorizontalAlignment="Center" Width="138"/>
+        <Button x:Name="buttonSetMatrix" Content="Задать элементы" VerticalAlignment="Center" Margin="5" Click="ButtonSetMatrix_Click" HorizontalAlignment="Center" Width="138"/>
         <Image HorizontalAlignment="Center" Margin="5" VerticalAlignment="Center" Source="Resources/img.png" Grid.Row="1">
             <Image.DataContext>
                 <Properties:Resources/>

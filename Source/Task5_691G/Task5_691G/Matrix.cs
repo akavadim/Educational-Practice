@@ -18,7 +18,7 @@ namespace Task5_691G
             for (int i = 0; i < countRows; i++)
                 for (int j = 0; j < countColumns; j++)
                 {
-                    matrix[i, j] = (int)table.Rows[i][j];
+                    matrix[i, j] = (double)table.Rows[i][j];
                 }
         }
 
@@ -26,7 +26,7 @@ namespace Task5_691G
 
         public Matrix(int rows, int columns)
         {
-            matrix = new int[rows, columns];
+            matrix = new double[rows, columns];
             count = rows * columns;
             countRows = rows;
             countColumns = columns;
@@ -36,7 +36,7 @@ namespace Task5_691G
 
         #region Свойства
 
-        int[,] matrix;
+        double[,] matrix;
         int count;
         int countRows;
         int countColumns;
@@ -47,7 +47,7 @@ namespace Task5_691G
 
         #endregion
 
-        public int this[int a, int b]
+        public double this[int a, int b]
         {
             get { return matrix[a, b]; }
             set { matrix[a, b] = value; }
@@ -63,7 +63,7 @@ namespace Task5_691G
         public object Clone()
         {
             Matrix res = new Matrix(countRows, countColumns);
-            res.matrix = matrix.Clone() as int[,];
+            res.matrix = matrix.Clone() as double[,];
             return res;
         }
 
@@ -75,7 +75,7 @@ namespace Task5_691G
             for (int i = 0; i < countColumns; i++)
             {
                 DataColumn column = new DataColumn();
-                column.DataType = typeof(int);
+                column.DataType = typeof(double);
                 res.Columns.Add(column);
             }
 
@@ -101,7 +101,7 @@ namespace Task5_691G
             bool up = true;
             bool bordered = false;
 
-            foreach (int cell in this)
+            foreach (double cell in this)
             {
                  res[x, y] = cell;
                 if (!bordered)
