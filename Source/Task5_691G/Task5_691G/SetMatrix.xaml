@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Task5_691G"
         mc:Ignorable="d"
-        Title="SetMatrix" Height="300" Width="500" ShowInTaskbar="False" WindowStartupLocation="CenterOwner">
+        Title="SetMatrix" Height="230" Width="450" ShowInTaskbar="False" WindowStartupLocation="CenterOwner">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -18,7 +18,7 @@
         </Grid.RowDefinitions>
         <Button x:Name="buttonOk" Content="Ок" HorizontalAlignment="Center" VerticalAlignment="Center" Width="76" Grid.Row="1" Height="19" Grid.Column="2" IsDefault="True" Click="ButtonOk_Click"/>
         <Button Content="Отмена" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="75" Height="19" Grid.Column="1" IsCancel="True"/>
-        <DataGrid x:Name="dataGridMatrix" Grid.ColumnSpan="3" BorderThickness="1" CanUserReorderColumns="False" CanUserSortColumns="False" HeadersVisibility="None" CanUserDeleteRows="False" EnableColumnVirtualization="True" CanUserAddRows="False" SelectionUnit="Cell"/>
+        <DataGrid x:Name="dataGridMatrix" Grid.ColumnSpan="3" BorderThickness="1" CanUserReorderColumns="False" CanUserSortColumns="False" HeadersVisibility="None" CanUserDeleteRows="False" EnableColumnVirtualization="True" CanUserAddRows="False" SelectionUnit="Cell" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled"/>
 
     </Grid>
 </Window>

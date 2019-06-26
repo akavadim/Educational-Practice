@@ -1,18 +1,28 @@
-﻿<Window x:Class="Task5_691G.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Task5_691G"
+        xmlns:Properties="clr-namespace:Task5_691G.Properties" x:Class="Task5_691G.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" BorderThickness="0">
+        Title="MainWindow" Height="190" Width="600" BorderThickness="0">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="50*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="dataGridMatrix" Grid.Column="2" CanUserReorderColumns="False" CanUserSortColumns="False" SelectionUnit="Cell" CanUserAddRows="False" CanUserDeleteRows="False" HeadersVisibility="None" IsReadOnly="True"/>
-        <Button x:Name="buttonSetMatrix" Content="Задать матрицу" VerticalAlignment="Top" Margin="10,0" Click="ButtonSetMatrix_Click"/>
+        <DataGrid x:Name="dataGridMatrix" CanUserReorderColumns="False" CanUserSortColumns="False" SelectionUnit="Cell" CanUserAddRows="False" CanUserDeleteRows="False" HeadersVisibility="None" IsReadOnly="True" Margin="0" Grid.RowSpan="2" Grid.Column="1" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled"/>
+        <Button x:Name="buttonSetMatrix" Content="Задать матрицу" VerticalAlignment="Center" Margin="5" Click="ButtonSetMatrix_Click" HorizontalAlignment="Center" Width="138"/>
+        <Image HorizontalAlignment="Center" Margin="5" VerticalAlignment="Center" Source="Resources/img.png" Grid.Row="1">
+            <Image.DataContext>
+                <Properties:Resources/>
+            </Image.DataContext>
+        </Image>
 
     </Grid>
 </Window>
